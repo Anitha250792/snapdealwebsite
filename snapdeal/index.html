@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SnApDeaL</title>
+  <link rel="icon" href="images/snapdealicon.png" type="image/png">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="sprinkle-background">
+    <div class="sprinkle" style="left: 5%; background-color: #f06292;"></div>
+    <div class="sprinkle" style="left: 15%; background-color: #ba68c8;"></div>
+    <div class="sprinkle" style="left: 30%; background-color: #4dd0e1;"></div>
+    <div class="sprinkle" style="left: 50%; background-color: #ffd54f;"></div>
+    <div class="sprinkle" style="left: 70%; background-color: #81c784;"></div>
+    <div class="sprinkle" style="left: 85%; background-color: #ff8a65;"></div>
+  </div>
+  
+  
+  
+  <header>
+    <div class="navbar">
+     
+      <div class="logo"><a href="index.html"><img src="images/snapdealicon.png"></a> Sn<span class="red">Ap</span><span class="blue">DeaL</span></div>
+      <nav>
+      
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About</a>
+        <a href="signup.html">Signup</a>
+      </nav>
+
+      
+      
+      <details class="dropdown">
+        <summary>Select Product Category</summary>
+        <ul>
+          <li><a href="gamepad.html">Gamepad</a></li>
+          <li><a href="shoes.html">Men's Shoes</a></li>
+          <li><a href="womenfashion.html">Women's Fashion</a></li>
+        </ul>
+      </details>
+    
+      <div class="icons">
+        <a href="signup.html">
+          <span>&#128100;</span>
+        </a>
+        <a href="wishlist.html">
+          <span>&#10084;</span>
+        </a>
+        <a href="bill.html">
+          <div class="cart-icon">
+            <span>&#128722;</span>
+            <span id="cart-count">0</span>
+          </div>          
+        </a>
+       </div>
+ 
+      
+    </div>
+  </header>
+
+  <main class="main-grid">
+    <section class="promo-banner">
+      <div class="promo-text">
+        <h2><img src="images/apple icon.png" alt="Apple" class="apple-logo">iPhone 15 Series</h2>
+         <h1>Up to 10%<br />Off Voucher</h1>
+      </div>
+      <img src="images/iphone-15.webp" alt="iPhone 15" class="promo-image" />
+    </section>
+  </main>
+
+  <section class="deals-section">
+    <h2>Today Deal’s</h2>
+  
+    <div class="product-grid">
+      <!-- Product 1 -->
+      <div class="product-card">
+        <span class="discount-tag">-40%</span>
+        <img src="images/gamepad 1.png" alt="Gamepad" class="product-img">
+        <span class="wishlist" 
+              data-name="HAVIT H42- Gamepad" 
+              data-price="₹120" 
+              data-img="images/gamepad 1.png" 
+              data-rating="5" 
+              data-discount="-40%">
+          &#10084;
+        </span>
+        <h3>HAVIT H42- Gamepad</h3>
+        <p class="price">₹120</p>
+        <div class="stars">★★★★★</div>
+      </div>
+  
+      <!-- Product 2 -->
+      <div class="product-card">
+        <span class="discount-tag">-40%</span>
+        <img src="images/Sofa image.png" alt="Chair" class="product-img">
+        <span class="wishlist" 
+              data-name="Comfort Chair" 
+              data-price="₹120" 
+              data-img="images/Sofa image.png" 
+              data-rating="5" 
+              data-discount="-40%">
+          &#10084;
+        </span>
+        <h3>Comfort Chair</h3>
+        <p class="price">₹120</p>
+        <div class="stars">★★★★★</div>
+      </div>
+  
+      <!-- Product 3 -->
+      <div class="product-card">
+        <span class="discount-tag">-40%</span>
+        <img src="images/airfryer image.png" alt="Airfryer" class="product-img">
+        <span class="wishlist" 
+              data-name="Philips - Airfryer" 
+              data-price="₹80" 
+              data-img="images/airfryer image.png" 
+              data-rating="3" 
+              data-discount="-40%">
+          &#10084;
+        </span>
+        <h3>Philips - Airfryer</h3>
+        <p class="price">₹80</p>
+        <div class="stars">★★★☆☆</div>
+      </div>
+    </div>
+  
+  </section>
+  
+  <section class="product-list-section">
+    <h2>Explore Our Products</h2>
+    <div class="product-grid">
+      <!-- Product 1 -->
+      <div class="product-card">
+        <span class="discount-tag">-40%</span>
+        <img src="images/Dictionary image.png" alt="OXFORD Dictionary" class="product-img">
+        <span class="wishlist"
+              data-name="OXFORD Dictionary" 
+              data-price="₹75" 
+              data-img="images/Dictionary image.png" 
+              data-rating="3" 
+              data-discount="-40%">
+        &#10084;</span>
+        <h3>OXFORD-Dictionary</h3>
+        <p class="price">₹75</p>
+        <div class="stars">★★★☆☆</div>
+      </div>
+  
+      <!-- Product 2 -->
+      <div class="product-card">
+        <span class="discount-tag">-40%</span>
+        <img src="images/Dog food image.jpg" alt="DOG FOOD - Fresh kisses" class="product-img">
+        <span class="wishlist"
+             data-name="DOG FOOD - Fresh kisses" 
+              data-price="130" 
+              data-img="images/Dog food image.jpg" 
+              data-rating="4" 
+              data-discount="-40%"> 
+        &#10084;</span>
+        <h3>DOG FOOD- Fresh kisses</h3>
+        <p class="price">₹130</p>
+        <div class="stars">★★★★☆</div>
+      </div>
+  
+      <!-- Product 3 -->
+      <div class="product-card">
+        <span class="discount-tag">-40%</span>
+        <img src="images/Asus laptop image.jpg" alt="Gaming Laptop" class="product-img">
+        <span class="wishlist"
+        data-name="ASUS -Laptop" 
+              data-price="₹33700" 
+              data-img="images/Asus laptop image.jpg" 
+              data-rating="4" 
+              data-discount="-40%">
+        &#10084;</span>
+        <h3>ASUS - Gaming Laptop</h3>
+        <p class="price">₹33700</p>
+        <div class="stars">★★★★☆</div>
+      </div>
+  
+      <!-- Product 4 -->
+      <div class="product-card">
+        <span class="discount-tag">-40%</span>
+        <img src="images/Electric car image.png" alt="Electric Car" class="product-img">
+        <span class="wishlist"
+        data-name="ELECTRIC CAR" 
+              data-price="₹500" 
+              data-img="images/Electric car image.png" 
+              data-rating="4" 
+              data-discount="-40%">
+        &#10084;</span>
+        <h3>ELECTRIC CAR- For Kids</h3>
+        <p class="price">₹500</p>
+        <div class="stars">★★★★☆</div>
+      </div>
+  
+      <!-- Product 5 -->
+      <div class="product-card">
+        <span class="discount-tag">-40%</span>
+        <img src="images/jacket image.png" alt="Jacket" class="product-img">
+        <span class="wishlist"
+        data-name="QUILTED SATIN- JACKET" 
+              data-price="₹950" 
+              data-img="images/jacket image.png" 
+              data-rating="3" 
+              data-discount="-40%">
+        &#10084;</span>
+        <h3>QUILTED SATIN- JACKET</h3>
+        <p class="price">₹950</p>
+        <div class="stars">★★★☆☆</div>
+      </div>
+  
+      <!-- Product 6 -->
+      <div class="product-card">
+        <span class="discount-tag">-40%</span>
+        <img src="images/Shoe image1.png" alt="Zoom Scooer Shoes" class="product-img">
+        <span class="wishlist"
+        data-name="ZOOM SCOOER- SHOES" 
+              data-price="120" 
+              data-img="images/Shoe image1.png" 
+              data-rating="5" 
+              data-discount="-40%">
+        &#10084;</span>
+        <h3>ZOOM SCOOER- SHOES</h3>
+        <p class="price">₹120</p>
+        <div class="stars">★★★★★</div>
+      </div>
+    </div>
+  </section>
+ 
+  <section class="new-arrival">
+    <h2>New Arrival</h2>
+
+    <div class="arrival-banner">
+      <div class="banner-content">
+        <h1>Women's Collections</h1>
+        <p>Featured Women collections that give you another vibe.</p>
+        <a href="womenfashion.html" class="shop-btn">Shop Now</a>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="banner-grid">
+    <div class="banner-card" style="background-image: url('images/speaker image.png');">
+      <div class="banner-text">
+        <h2>Speakers</h2>
+        <p>High Volume wired speaker</p>
+        <a href="gamepad.html" class="shop-now">Shop Now</a>
+      </div>
+    </div>
+
+    <div class="banner-card" style="background-image: url('images/men\ shoe\ image\ 4.png');">
+      <div class="banner-text">
+        <h2>Men's Shoes</h2>
+        <p>Sauvagi - Dior</p>
+        <a href="shoes.html" class="shop-now">Shop Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="feature-item">
+      <div class="feature-icon">🚚</div>
+      <h3>FREE AND FAST DELIVERY</h3>
+      <p>Free delivery for all orders over ₹1000</p>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon">🎧</div>
+      <h3>24/7 CUSTOMER SERVICE</h3>
+      <p>24/7 Friendly customer support</p>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon">✅</div>
+      <h3>MONEY BACK GUARANTEE</h3>
+      <p>We return money within 30 days</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h2>SNAPDEAL</h2>
+        <h4>Subscribe</h4>
+        <p>Get 10% off your first product</p>
+      </div>
+  
+      <div class="footer-column">
+        <h4>Support</h4>
+        <p>11, Gandhi Nagar, Chennai.</p>
+        <p>exclusive@gmail.com</p>
+        <p>+123456789</p>
+      </div>
+  
+      <div class="footer-column">
+        <h4>Account</h4>
+        <ul>
+          <li><a href="signup.html">My Account</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="bill.html">Cart</a></li>
+          <li><a href="wishlist.html">Wishlist</a></li>
+          <li><a href="index.html">Shop</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-column">
+        <h4>Quick Link</h4>
+        <ul>
+          <li><a href="index.html">Privacy Policy</a></li>
+          <li><a href="index.html">Terms of use</a></li>
+          <li><a href="contact.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>Copyright@snapdeal.com</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"><img src="images/facebook icon.png"></i></a>
+        <a href="#"><i class="fab fa-twitter"><img src="images/twitter icon.png"></i></a>
+        <a href="#"><i class="fab fa-instagram"><img src="images/instagram.png"></i></a>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- FontAwesome CDN for social icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  
+
+<script>
+  const banner = document.querySelector('.arrival-banner');
+
+banner.addEventListener('mouseover', () => {
+  banner.style.transform = 'scale(1.02)';
+  banner.style.transition = 'transform 0.5s ease';
+});
+
+banner.addEventListener('mouseout', () => {
+  banner.style.transform = 'scale(1)';
+});
+const banners = document.querySelectorAll('.banner-card');
+
+banners.forEach(banner => {
+  banner.addEventListener('mouseover', () => {
+    banner.style.transform = 'scale(1.03)';
+    banner.style.transition = 'transform 0.5s ease';
+  });
+  banner.addEventListener('mouseout', () => {
+    banner.style.transform = 'scale(1)';
+  });
+});
+
+document.querySelectorAll('.footer-column a').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+  
+  document.addEventListener("DOMContentLoaded", () => {
+    const searchBtn = document.getElementById("search-btn");
+    const dropdownMenu = document.getElementById("dropdown-menu");
+
+    searchBtn.addEventListener("click", () => {
+        dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener("click", (event) => {
+        if (!searchBtn.contains(event.target) && !dropdownMenu.contains(event.target)) {
+            dropdownMenu.style.display = "none";
+        }
+    });
+});
+
+  document.querySelectorAll('.wishlist').forEach(icon => {
+    icon.addEventListener('click', () => {
+      const item = {
+        name: icon.dataset.name,
+        price: icon.dataset.price,
+        imgSrc: icon.dataset.img,
+        rating: parseInt(icon.dataset.rating),
+        discount: icon.dataset.discount
+      };
+
+      // Get existing wishlist or create a new one
+      let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+      // Check for duplicates
+      const exists = wishlist.some(product => product.name === item.name);
+      if (!exists) {
+        wishlist.push(item);
+        localStorage.setItem('wishlist', JSON.stringify(wishlist));
+        alert(`${item.name} added to wishlist!`);
+      } else {
+        alert(`${item.name} is already in your wishlist.`);
+      }
+    });
+  });
+
+  const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+document.getElementById('wishlist-count').textContent = wishlist.length;
+
+function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const count = cart.reduce((total, item) => total + item.quantity, 0);
+    const cartCountElement = document.getElementById("cart-count");
+    if (cartCountElement) {
+      cartCountElement.textContent = count;
+    }
+  }
+
+  // Call once on page load
+  document.addEventListener("DOMContentLoaded", updateCartCount);
+
+</script>
+
+</body>
+</html>

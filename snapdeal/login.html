@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SnApDeaL</title>
+  <link rel="icon" href="images/snapdealicon.png" type="image/png">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<style>
+  .container {
+  background: url('images/Signup\ page\ image.jpg') no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.login-form {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.brand {
+  color: red;
+  font-weight: bold;
+}
+
+
+p {
+  margin-bottom: 20px;
+  color: #444;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-bottom: 2px solid #333;
+  background: transparent;
+  outline: none;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login-btn {
+  padding: 10px 20px;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background-color: darkred;
+}
+
+.forgot {
+  color: red;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.forgot:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .login-form {
+    padding: 20px;
+  }
+
+  .login-btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .forgot {
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+</style>
+<body>
+  <div class="sprinkle-background">
+    <div class="sprinkle" style="left: 5%; background-color: #f06292;"></div>
+    <div class="sprinkle" style="left: 15%; background-color: #ba68c8;"></div>
+    <div class="sprinkle" style="left: 30%; background-color: #4dd0e1;"></div>
+    <div class="sprinkle" style="left: 50%; background-color: #ffd54f;"></div>
+    <div class="sprinkle" style="left: 70%; background-color: #81c784;"></div>
+    <div class="sprinkle" style="left: 85%; background-color: #ff8a65;"></div>
+  </div>
+  <header>
+    <div class="navbar">
+      <div class="logo"><a href="index.html"><img src="images/snapdealicon.png"> Sn<span class="red">Ap</span><span class="blue">DeaL</span></a></div>
+      <nav>
+       
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About</a>
+        <a href="signup.html">Signup</a>
+      </nav>
+
+      <details class="dropdown">
+        <summary>Select Product Category</summary>
+        <ul>
+          <li><a href="gamepad.html">Gamepad</a></li>
+          <li><a href="shoes.html">Men's Shoes</a></li>
+          <li><a href="womenfashion.html">Women's Fashion</a></li>
+        </ul>
+      </details>
+
+      <div class="icons">
+        <a href="signup.html">
+          <span>&#128100;</span>
+        </a>
+        <a href="wishlist.html">
+          <span>&#10084;</span>
+        </a>
+        <a href="bill.html">
+          <div class="cart-icon">
+            <span>&#128722;</span>
+            <span id="cart-count">0</span>
+          </div>          
+        </a>
+      </div>
+    </div>
+  </header>
+  
+  <body>
+
+    <div class="container">
+      <div class="login-form">
+        <h1>Log in to <span class="brand">SnApDeaL</span></h1>
+        <p>Enter your Details Below</p>
+  
+        <form id="loginForm">
+          <input type="text" id="email" placeholder="Email or Phone number" required />
+          <div style="position: relative;">
+            <input type="password" id="password" placeholder="Password" required />
+            <span id="togglePassword" style="position:absolute; right:10px; top:12px; cursor:pointer;">👁️</span>
+          </div>
+  
+          <div class="actions">
+            <a href="index.html"><button type="submit" class="login-btn">LOGIN</button></a>
+            <a href="#" class="forgot">Forget password?</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  
+    <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-column">
+            <h2>SNAPDEAL</h2>
+            <h4>Subscribe</h4>
+            <p>Get 10% off your first product</p>
+          </div>
+      
+          <div class="footer-column">
+            <h4>Support</h4>
+            <p>11, Gandhi Nagar, Chennai.</p>
+            <p>exclusive@gmail.com</p>
+            <p>+123456789</p>
+          </div>
+      
+          <div class="footer-column">
+            <h4>Account</h4>
+            <ul>
+              <li><a href="signup.html">My Account</a></li>
+              <li><a href="login.html">Login</a></li>
+              <li><a href="bill.html">Cart</a></li>
+              <li><a href="wishlist.html">Wishlist</a></li>
+              <li><a href="index.html">Shop</a></li>
+            </ul>
+          </div>
+      
+          <div class="footer-column">
+            <h4>Quick Link</h4>
+            <ul>
+              <li><a href="index.html">Privacy Policy</a></li>
+              <li><a href="index.html">Terms of use</a></li>
+              <li><a href="contact.html">FAQ</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      
+        <div class="footer-bottom">
+          <p>Copyright@snapdeal.com</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"><img src="images/facebook icon.png"></i></a>
+            <a href="#"><i class="fab fa-twitter"><img src="images/twitter icon.png"></i></a>
+            <a href="#"><i class="fab fa-instagram"><img src="images/instagram.png"></i></a>
+          </div>
+        </div>
+      </footer>
+      
+     
+      <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+      
+      <script>
+        document.querySelectorAll('.footer-column a').forEach(link => {
+          link.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          });
+        });
+        
+        // Login Function
+        document.getElementById("loginForm").addEventListener("submit", function (e) {
+          e.preventDefault();
+        
+          const email = document.getElementById("email").value.trim();
+          const password = document.getElementById("password").value.trim();
+          const storedUser = localStorage.getItem(email);
+        
+          if (storedUser) {
+            const user = JSON.parse(storedUser);
+            if (user.password === password) {
+              alert("Login successful!");
+              window.location.href = "index.html";
+            } else {
+              alert("Incorrect password.");
+            }
+          } else {
+            alert("No account found with that email.");
+          }
+        });
+        
+        // Toggle password visibility
+        document.getElementById("togglePassword").addEventListener("click", function () {
+          const passwordField = document.getElementById("password");
+          const type = passwordField.getAttribute("type") === "password" ? "text" : "password";
+          passwordField.setAttribute("type", type);
+          this.textContent = type === "password" ? "👁️" : "🙈";
+        });
+
+        function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const count = cart.reduce((total, item) => total + item.quantity, 0);
+    const cartCountElement = document.getElementById("cart-count");
+    if (cartCountElement) {
+      cartCountElement.textContent = count;
+    }
+  }
+
+  // Call once on page load
+  document.addEventListener("DOMContentLoaded", updateCartCount);
+        </script>
+        
+</body>
+</html>
+   
+

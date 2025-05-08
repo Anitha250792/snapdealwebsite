@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SnApDeaL</title>
+  <link rel="icon" href="images/snapdealicon.png" type="image/png">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<style>
+    
+
+/* Container with responsive grid */
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+ 
+  margin-top: 180px;
+  margin-bottom: 50px;/* Adjusted margin for mobile */
+}
+
+/* Product card styling */
+.card {
+    background: white;
+  border-radius: 8px;
+  padding: 10px;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 300px;
+  height: 200px;
+  margin-bottom: 120px;
+}
+
+/* Hover effect */
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Discount badge */
+.discount {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: red;
+  color: white;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 5px;
+}
+.wishlist {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 25px;
+  color: #999;
+  cursor: pointer;
+}
+
+.wishlist:hover {
+color: red;
+}
+/* Card image */
+.card img {
+  width: 100%;
+  max-width: 300px;
+  height: 100%;
+  max-height: 200px;
+  background-color: black;
+}
+
+/* Product details */
+.details {
+  padding: 15px;
+  text-align: center;
+}
+
+/* Price and rating */
+.price {
+  color: red;
+  font-weight: bold;
+}
+
+.rating {
+  color: gold;
+  margin: 5px 0;
+}
+
+/* Action buttons */
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.actions button {
+  flex: 1;
+  margin: 0 5px;
+  padding: 8px;
+  border: none;
+  font-weight: bold;
+  color: white;
+  background: black;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.actions .buy {
+  background: red;
+}
+
+/* Tablet view */
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile view */
+@media (max-width: 600px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+}
+
+
+</style>
+<body>
+  <div class="sprinkle-background">
+    <div class="sprinkle" style="left: 5%; background-color: #f06292;"></div>
+    <div class="sprinkle" style="left: 15%; background-color: #ba68c8;"></div>
+    <div class="sprinkle" style="left: 30%; background-color: #4dd0e1;"></div>
+    <div class="sprinkle" style="left: 50%; background-color: #ffd54f;"></div>
+    <div class="sprinkle" style="left: 70%; background-color: #81c784;"></div>
+    <div class="sprinkle" style="left: 85%; background-color: #ff8a65;"></div>
+  </div>
+
+  <header>
+    <div class="navbar">
+     
+      <div class="logo"><a href="index.html"><img src="images/snapdealicon.png"> Sn<span class="red">Ap</span><span class="blue">DeaL</span></a></div>
+
+      <nav>
+       
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About</a>
+        <a href="signup.html">Signup</a>
+      </nav>
+
+      <details class="dropdown">
+        <summary>Select Product Category</summary>
+        <ul>
+          <li><a href="gamepad.html">Gamepad</a></li>
+          <li><a href="shoes.html">Men's Shoes</a></li>
+          <li><a href="womenfashion.html">Women's Fashion</a></li>
+        </ul>
+      </details>
+    
+
+      <div class="icons">
+        <a href="signup.html">
+          <span>&#128100;</span>
+        </a>
+        <a href="wishlist.html">
+          <span>&#10084;</span>
+        </a>
+        <a href="bill.html">
+          <div class="cart-icon">
+            <span>&#128722;</span>
+            <span id="cart-count">0</span>
+          </div>          
+        </a>
+      </div>
+    </div>
+    
+  </header>
+
+  <div class="container">
+
+    <div class="card">
+        <div class="discount">-40%</div>
+        <span class="wishlist"
+             data-name="Anouk’s Men solid slip" 
+              data-price="₹200" 
+              data-img="images/men shoe image 2.png" 
+              data-rating="4" 
+              data-discount="-40%"> 
+        &#10084;</span>
+        <img src="images/men shoe image 2.png" alt="Anouk’s Men solid slip">
+        <div class="details">
+          <p>Anouk’s Men solid slip</p>
+          <p class="price">₹200</p>
+          <p class="rating">⭐⭐⭐⭐☆</p>
+          <div class="actions">
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="buy">Buy Now</button>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Card 2: The Roadster and Lifestyle -->
+      <div class="card">
+        <div class="discount">-40%</div>
+        <span class="wishlist"
+             data-name="The Roadster and Lifestyle" 
+              data-price="₹250" 
+              data-img="images/men shoe image 3.png" 
+              data-rating="5" 
+              data-discount="-40%"> 
+        &#10084;</span>
+        <img src="images/men shoe image 3.png" alt="The Roadster and Lifestyle">
+        <div class="details">
+          <p>The Roadster and Lifestyle</p>
+          <p class="price">₹250</p>
+          <p class="rating">⭐⭐⭐⭐⭐</p>
+          <div class="actions">
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="buy">Buy Now</button>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Card 3: BATA corporate and casuals -->
+      <div class="card">
+        <div class="discount">-40%</div>
+        <span class="wishlist"
+        data-name="BATA corporate and casuals" 
+         data-price="₹150" 
+         data-img="images/men shoe image 4.png" 
+         data-rating="5" 
+         data-discount="-40%"> 
+   &#10084;</span>
+        <img src="images/men shoe image 4.png" alt="BATA corporate and casuals">
+        <div class="details">
+          <p>BATA corporate and casuals</p>
+          <p class="price">₹150</p>
+          <p class="rating">⭐⭐⭐⭐⭐</p>
+          <div class="actions">
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="buy">Buy Now</button>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Card 4: Campus Men’s Laceup -->
+      <div class="card">
+        <div class="discount">-40%</div>
+        <span class="wishlist"
+        data-name="Campus Men’s Laceup" 
+         data-price="₹450" 
+         data-img="images/men shoe image 5.png" 
+         data-rating="5" 
+         data-discount="-40%"> 
+   &#10084;</span>
+        <img src="images/men shoe image 5.png" alt="Campus Men’s Laceup">
+        <div class="details">
+          <p>Campus Men’s Laceup</p>
+          <p class="price">₹450</p>
+          <p class="rating">⭐⭐⭐⭐⭐</p>
+          <div class="actions">
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="buy">Buy Now</button>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Card 5: BATTLE Dragon - casual shoes -->
+      <div class="card">
+        <div class="discount">-40%</div>
+        <span class="wishlist"
+        data-name="BATTLE Dragon - casual shoes" 
+         data-price="₹400" 
+         data-img="images/men shoe image 6.png" 
+         data-rating="5" 
+         data-discount="-40%"> 
+   &#10084;</span>
+        <img src="images/men shoe image 6.png" alt="BATTLE Dragon - casual shoes">
+        <div class="details">
+          <p>BATTLE Dragon - casual shoes</p>
+          <p class="price">₹400</p>
+          <p class="rating">⭐⭐⭐⭐⭐</p>
+          <div class="actions">
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="buy">Buy Now</button>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Card 6: Crocs casual Slippers – Men’s -->
+      <div class="card">
+        <div class="discount">-40%</div>
+        <span class="wishlist"
+        data-name="Crocs casual Slippers – Men’s" 
+         data-price="₹350" 
+         data-img="images/men shoe image 7.png" 
+         data-rating="5" 
+         data-discount="-40%"> 
+   &#10084;</span>
+        <img src="images/men shoe image 7.png" alt="Crocs casual Slippers – Men’s">
+        <div class="details">
+          <p>Crocs casual Slippers – Men’s</p>
+          <p class="price">₹350</p>
+          <p class="rating">⭐⭐⭐⭐⭐</p>
+          <div class="actions">
+            <button >Add to Cart</button>
+            <button class="buy">Buy Now</button>
+          </div>
+        </div>
+      </div>
+  </div>
+   
+  <script>
+    // Optional: Add to cart or buy now functionality
+document.querySelectorAll('.cart').forEach (button => 
+{
+  button.addEventListener('click', () => {
+    alert('Added to cart!');
+  });
+})
+
+document.querySelectorAll('.wishlist').forEach(icon => {
+    icon.addEventListener('click', () => {
+      const item = {
+        name: icon.dataset.name,
+        price: icon.dataset.price,
+        imgSrc: icon.dataset.img,
+        rating: parseInt(icon.dataset.rating),
+        discount: icon.dataset.discount
+      };
+
+      // Get existing wishlist or create a new one
+      let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+      // Check for duplicates
+      const exists = wishlist.some(product => product.name === item.name);
+      if (!exists) {
+        wishlist.push(item);
+        localStorage.setItem('wishlist', JSON.stringify(wishlist));
+        alert(`${item.name} added to wishlist!`);
+      } else {
+        alert(`${item.name} is already in your wishlist.`);
+      }
+    });
+  });
+
+  const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+document.getElementById('wishlist-count').textContent = wishlist.length;
+
+window.onload = function () {
+    // Loop through each product card
+    document.querySelectorAll('.card').forEach(card => {
+      // Get product details from inside the card
+      const name = card.querySelector('.details p:nth-child(1)').innerText;
+      const price = card.querySelector('.price').innerText;
+      const image = card.querySelector('img').src;
+
+      // Handle Add to Cart
+      card.querySelector('.add-to-cart').addEventListener('click', () => {
+        addToCart({ name, price, image });
+        alert('Added to cart!');
+      });
+
+      // Handle Buy Now
+      card.querySelector('.buy').addEventListener('click', () => {
+        addToCart({ name, price, image });
+        window.location.href = 'bill.html';
+      });
+    });
+
+    // Add to cart function using localStorage
+    function addToCart(product) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart.push(product);
+      localStorage.setItem('cart', JSON.stringify(cart));
+    }
+  };
+
+function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const count = cart.reduce((total, item) => total + item.quantity, 0);
+    const cartCountElement = document.getElementById("cart-count");
+    if (cartCountElement) {
+      cartCountElement.textContent = count;
+    }
+  }
+
+  // Call once on page load
+  document.addEventListener("DOMContentLoaded", updateCartCount);
+  </script>
+
+</body>
+</html>
