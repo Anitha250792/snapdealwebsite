@@ -221,53 +221,65 @@ input {
       <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
       
       <script>
-        document.querySelectorAll('.footer-column a').forEach(link => {
-          link.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+         document.addEventListener("DOMContentLoaded", function () {
+      const cartItemsContainer = document.getElementById("cart-items");
+      const subtotalElement = document.getElementById("subtotal-amount");
+      const totalElement = document.getElementById("total-amount");
+      console.log(JSON.parse(localStorage.getItem("cart")));
+
+      // let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      let subtotal = 0;
+
+      if (cart.length === 0) {
+        cartItemsContainer.innerHTML = "<p>Your cart is empty.</p>";
+      } else {
+        cart.forEach((item, index) => {
+          const price = parseFloat(item.price);
+          const quantity = item.quantity || 1;
+          const subtotalItem = price * quantity;
+          subtotal = item.price * item.quantity;
+
+          const itemDiv = document.createElement("div");
+          itemDiv.classList.add("cart-row", "cart-item");
+          itemDiv.innerHTML = `
+            <div class="product-info">
+              <img src="${item.image}" alt="${item.name}" />
+              <span>${item.name}</span>
+            </div>
+            <div class="price" data-price="${price}">₹${price.toFixed(2)}</div>
+            <div class="quantity">
+              <input type="number" min="1" value="${quantity}" style="width:50px;" />
+            </div>
+            <div class="subtotal">₹${subtotalItem.toFixed(2)}</div>
+            <button class="remove-btn" data-index="${index}">Remove</button>
+          `;
+
+          cartItemsContainer.appendChild(itemDiv);
+        });
+
+        subtotalElement.textContent = `₹${subtotal.toFixed(2)}`;
+        totalElement.textContent = `₹${subtotal.toFixed(2)}`;
+
+        document.querySelectorAll('.quantity input').forEach((input, i) => {
+          input.addEventListener('change', function () {
+            const val = parseInt(this.value);
+            if (isNaN(val) || val < 1) this.value = 1;
+            cart[i].quantity = parseInt(this.value);
+            localStorage.setItem("cart", JSON.stringify(cart));
+            location.reload();
           });
         });
-        
-        // Login Function
-        document.getElementById("loginForm").addEventListener("submit", function (e) {
-          e.preventDefault();
-        
-          const email = document.getElementById("email").value.trim();
-          const password = document.getElementById("password").value.trim();
-          const storedUser = localStorage.getItem(email);
-        
-          if (storedUser) {
-            const user = JSON.parse(storedUser);
-            if (user.password === password) {
-              alert("Login successful!");
-              window.location.href = "index.html";
-            } else {
-              alert("Incorrect password.");
-            }
-          } else {
-            alert("No account found with that email.");
-          }
-        });
-        
-        // Toggle password visibility
-        document.getElementById("togglePassword").addEventListener("click", function () {
-          const passwordField = document.getElementById("password");
-          const type = passwordField.getAttribute("type") === "password" ? "text" : "password";
-          passwordField.setAttribute("type", type);
-          this.textContent = type === "password" ? "👁️" : "🙈";
-        });
 
-        function updateCartCount() {
-    const cart = JSON.parse(localStorage.getItem("cart")) || [];
-    const count = cart.reduce((total, item) => total + item.quantity, 0);
-    const cartCountElement = document.getElementById("cart-count");
-    if (cartCountElement) {
-      cartCountElement.textContent = count;
-    }
-  }
-
-  // Call once on page load
-  document.addEventListener("DOMContentLoaded", updateCartCount);
+        document.querySelectorAll('.remove-btn').forEach(button => {
+          button.addEventListener('click', function () {
+            const index = this.getAttribute('data-index');
+            cart.splice(index, 1);
+            localStorage.setItem("cart", JSON.stringify(cart));
+            location.reload();
+          });
+        });
+      }
+    });
         </script>
         
 </body>
